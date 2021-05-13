@@ -1,15 +1,12 @@
 import requests
 
-url = "https://example.com/api/v2/db/_table/contact_info?limit=5"
+url = "https://sskgimnq5h.execute-api.us-east-2.amazonaws.com/Test/buckets"
 
-headers = {
-        "cache-control": "no-cache",
-        "x-dreamfactory-api-key": "YOUR_API_KEY"
+body = {
+    "name": "Test2"
 }
 
-response = requests.request("GET", url, headers=headers)
+#response = requests.post(url, json=body)
+response = requests.get(url)
 
 print(response.text)
-
-#msg = "Hello World"
-#print(msg)
